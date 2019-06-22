@@ -73,7 +73,7 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
    # 'Douban.pipelines.DoubanPipeline': 300,
     'Douban.pipelines.MongoPipeline': 300,
-    'scrapy_redis.pipelines.RedisPipeline': 301
+    # 'scrapy_redis.pipelines.RedisPipeline': 301
 
 }
 
