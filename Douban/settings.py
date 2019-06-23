@@ -103,8 +103,8 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 """ 启用限速设置 """
 AUTOTHROTTLE_ENABLED = True
-AUTOTHROTTLE_START_DELAY = 0.2  # 初始下载延迟
-DOWNLOAD_DELAY = 0.2  # 每次请求间隔时间
+AUTOTHROTTLE_START_DELAY = 0.5  # 初始下载延迟
+DOWNLOAD_DELAY = 0.5  # 每次请求间隔时间
 
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 

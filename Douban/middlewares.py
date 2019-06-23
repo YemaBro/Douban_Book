@@ -11,9 +11,9 @@ import base64
 
 class ProxyMiddleware(object):
     def __init__(self):
-        self.proxyServer = 'http://http-cla.abuyun.com:9030'
-        self.proxyUser = 'H3N23D1B0WLPUM4C'
-        self.proxyPass = '83203DC1C7F23012'
+        self.proxyServer = 'http://http-dyn.abuyun.com:9020'
+        self.proxyUser = 'H3LSLO1JV15947BD'
+        self.proxyPass = '8A703A7E5927AE98'
         self.proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((self.proxyUser + ":" + self.proxyPass), "ascii"))\
             .decode("utf8")
 
