@@ -108,3 +108,5 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 REDIS_URL = 'redis://root:147896325@132.232.211.79:6379'
 
+REDIRECT_ENALBED = False
+
