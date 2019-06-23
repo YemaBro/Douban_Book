@@ -24,6 +24,9 @@ MONGO_DATABASE = 'Douban_Book'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+MYEXT_ENABLED=True      # 开启扩展
+IDLE_NUMBER= 120           # 配置空闲持续时间单位为 360个 ，一个时间单位为5s
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -64,9 +67,10 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+EXTENSIONS = {
+   # 'scrapy.extensions.telnet.TelnetConsole': None,
+    'Douban.extensions.RedisSpiderSmartIdleClosedExensions': 500
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html

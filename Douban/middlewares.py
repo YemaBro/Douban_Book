@@ -20,6 +20,7 @@ class ProxyMiddleware(object):
     def process_request(self, request, spider):
         request.meta["proxy"] = self.proxyServer
         request.headers["Proxy-Authorization"] = self.proxyAuth
+        # request.headers['Proxy-Switch-Ip'] = 'yes'
 
 
 class DoubanSpiderMiddleware(object):
