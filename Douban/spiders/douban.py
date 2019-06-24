@@ -27,7 +27,7 @@ class DoubanSpider(RedisSpider):
             item = DoubanItem()
             item['title'] = ele.css(".info h2 a::text").get().strip()
             pub_all = ele.css(".info .pub::text").get().strip().split(' / ')
-            item['author'] = ''.join(pub_all[:-3])
+            item['author'] = '/'.join(pub_all[:-3])
             item['pub'] = ''.join(pub_all[-3:-2])
             item['date'] = ''.join(pub_all[-2:-1])
             item['price'] = ''.join(pub_all[-1:])
